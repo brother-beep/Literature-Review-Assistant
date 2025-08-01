@@ -50,7 +50,7 @@ arxiv_tool = FunctionTool(
 # 2. Agent team
 def build_team(model: str = "gemini-2.5-flash") -> RoundRobinGroupChat:
     """Create and return a two-agent RoundRobinGroupChat team."""
-    llm_client = OpenAIChatCompletionClient(model=model, api_key="AIzaSyCSE1aNfEjmiPXoEzIuWtNJiVgwwcg1180")
+    llm_client = OpenAIChatCompletionClient(model=model, api_key="YOUR_API_KEY")
 
     search_agent = AssistantAgent(
         name="search_agent",
@@ -151,3 +151,4 @@ if __name__ == "__main__":
             print(markdown)
 
     asyncio.run(_demo())
+
